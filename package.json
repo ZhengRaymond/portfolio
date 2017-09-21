@@ -12,7 +12,7 @@
   },
   "author": "Max Stoiber",
   "license": "MIT",
-  "homepage": "https://ZhengRaymond.github.io/",
+  "homepage": "https://ZhengRaymond.github.io/portfolio",
   "scripts": {
     "deploy": "npm run build&&gh-pages -d build",
     "analyze:clean": "rimraf stats.json",
