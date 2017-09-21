@@ -26,3 +26,8 @@ const Header = styled.div`
 `
 
 export default Header;
+
+export const SubHeader = styled(Header)`
+  max-width: 65vw;
+  white-space: normal;
+`

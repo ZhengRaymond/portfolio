@@ -20,16 +20,6 @@ const fadein2 = keyframes`
 	}
 `
 
-const fadein3 = keyframes`
-	0%, 67% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 0.05;
-	}
-`
-
 const expand = keyframes`
 	0%, 80% {
 		margin: 0 0.5vw;
@@ -37,6 +27,17 @@ const expand = keyframes`
 
 	100% {
 		margin: 0 1.5vw;
+	}
+`
+
+const shrink = keyframes`
+	0%, 78% {
+		opacity: 1.0;
+		transform: scale(1.1);
+	}
+
+	100% {
+		opacity: 0;
 	}
 `
 
@@ -74,4 +75,4 @@ const glow = keyframes`
 	}
 `
 
-export { fadein, fadein2, expand, glow, typing, blink_caret }
+export { fadein, fadein2, shrink, expand, glow, typing, blink_caret }

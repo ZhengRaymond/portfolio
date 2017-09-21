@@ -12,10 +12,11 @@ export const fetch_works = () => {
         'Backend Developer'
       ],
       details: [
-        'Developed and maintained "Orchard", a highly efficient and fast environment provisioner for AppDirect engineers to develop on.',
+        'Developed and maintained "Orchard", a highly efficient and fast environment provisioner for AppDirect engineers to develop on. The UI updates saved at 80% of clicks, monitored using analytics tools like HeapAnalytics integrated through segment.io.',
         'Updated UI and implemented features from Kubernetes 1.5 to 1.7 update to allow better debugging, smoother and quicker updates.',
-	      'Created frontend/backend for Duct, a secrets and microservice configuration tool (platform team’s open source project), MERN stack.',
-        'Implemented Chatops for 5+ platform tools. This eliminates the need for admin UI dashboards, allowing platform admins to receive, review, and solve support tickets via Slack.'
+	      'Created frontend and persistent storage schema for Duct, a secrets and microservice configuration tool, using MongoDB, React, Express, and Node.',
+        'Implemented GraphQL for Duct. This will later be very important, as Duct is designed to be used alongside AppDirect\'s existing infrastructure tools, meaning it will be processing huge amounts of information. Due to Duct\'s very interwoven/coupled data, this will make data fetching far easier and efficient.',
+        'Implemented Chatops server for platform tools, as well as integrations for 3 of these tools. This eliminates the need for admin UI dashboards, allowing platform admins to receive, review, and solve support tickets via Slack. This is extremely helpful, as the context switching forced by the support tickets heavily impacts productivity. In fact, a 4th of the platform team is always boggled down as "support week engineer" to solely handle these support tickets.'
       ],
       skills: [
         'React', 'GraphQL', 'Angular', 'AWS EC2', 'Kubernetes', 'Jenkins', 'Mongo/Express/Node'
@@ -32,7 +33,7 @@ export const fetch_works = () => {
       details: [
         'Automated monitoring of server health for platform and production servers. Directly fixed daily issues on 7 of these servers.',
         'Used Docker to solve incompatibility issues for many scripts, reducing the need for 20+ versions of every script, to just one.',
-        'Used Selenium and Python to implement testing, logging, and analytics. '
+        'Used Selenium and Python to implement testing, logging, and analytics. Eliminated repetitive work previously done by HR or other developers.'
       ],
       skills: [
         'Python, Selenium, Docker, Bash, Zabbix'
@@ -53,8 +54,8 @@ export const fetch_projects = () =>  {
         'Hack The North'
       ],
       details: [
-        'Chatbot that scrapes for pictures online, and takes photos of users, then identifies items of clothing in the images',
-        'Gives dressing advice based on comparison, and suggests fitting alternatives on Amazon'
+        'Chatbot that scrapes for pictures online, and takes photos of users, then identifies items of clothing in the images. It then gives style advice by comparing what it found as trendy and what the user is wearing, and suggests improved alternatives on Amazon.',
+        'Built in a team of 4. Work was split between working with Azure, Watson, and GCP. I was responsible for Azure Bot/NLP, but the work turned out to relatively straightforward, as well as having really long build times. Hence, I later worked on integrating the vision APIs into our Azure bot.'
       ],
       skills: [
         'Azure Bot/LUIS/Text Analytics, Google Vision, IBM Watson Vision, Amazon Product Ad API'
@@ -68,10 +69,11 @@ export const fetch_projects = () =>  {
         'PennApps XVI'
       ],
       details: [
-        'Scrapes tweets from Twitter, and uses a soft hierarchical clustering model to find important localized news like car accidents, floods, weather alerts, etc.'
+        'Scrapes tweets from Twitter, and uses a soft hierarchical clustering model to find important localized news like car accidents, floods, weather alerts, etc.',
+        'I created the frontend and helped trained the data with a k-means clustering model. Within the frontend, I used D3 map projections but split down into more reusable React Components.'
       ],
       skills: [
-        'React', 'Redux', 'D3.js', 'Twitter API'
+        'React', 'Redux', 'D3.js', 'Twitter API', 'Tensorflow'
       ]
     },
     {
@@ -82,7 +84,8 @@ export const fetch_projects = () =>  {
         'StartHacks'
       ],
       details: [
-        'Web application that tracks a musician’s sound in order to automatically display the correct sheet music in accordance to his location in the song.'
+        'Web application that tracks a musician’s sound in order to automatically display the correct sheet music in accordance to his location in the song.',
+        'Worked with a UI designer in a team of 2. I was responsible for the piano functionality as well as the algorithm behind tracking the musician\'s playing.'
       ],
       skills: [
         'Angular', 'Node.js'
@@ -96,7 +99,8 @@ export const fetch_projects = () =>  {
         'EngHack'
       ],
       details: [
-        'Uses a neural network to teach a computer how to play Tetris indefinitely.'
+        'Uses a neural network to teach a computer how to play Tetris indefinitely. The program is good enough to last millions of lines until a specific sequence of blocks causes (mathematically impossible) a inevitable loss.',
+        'Worked in a team of 2. Responsible for the logistic regression algorithm, as well as the web application demonstration.'
       ],
       skills: [
         'Node.js', 'C++', 'Logistic Regression'

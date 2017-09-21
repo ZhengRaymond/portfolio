@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import Header from 'components/header';
+import Header, { SubHeader } from 'components/header';
 import { fadein, fadein2  } from 'styles/animations';
 import './page.css';
 var FAExternalLink = require('react-icons/lib/fa/external-link');
@@ -49,9 +49,13 @@ const Details = styled.div`
   transition: opacity 1s ease, max-height 1s ease;
 
   &.open {
-    max-height: 400px;
+    max-height: 500px;
     opacity: 1;
     transition: opacity 1s ease 0.2s, max-height 1s ease;
+  }
+
+  @media (max-device-width: 700px) {
+    padding: 0;
   }
 `
 
@@ -73,6 +77,12 @@ const Link = styled.a`
   &:hover {
     color: #aaa;
     transition: all 0.3s;
+  }
+
+  @media (max-device-width: 700px) {
+    font-size: 12px;
+    right: 22px;
+    top: 18px;
   }
 `
 
@@ -107,7 +117,7 @@ class Panel extends React.Component {
         <Link target="_blank" href={this.props.data.link}><FAExternalLink/></Link>
         <PanelBox className={this.state.active ? 'open' : ''} onClick={this.toggle}>
           <Header animation={false} size="medium">{this.props.data.title}</Header>
-          <Header animation={false} size="small">{formatSubtitle(this.props.data.subtitle)}</Header>
+          <SubHeader animation={false} size="small">{formatSubtitle(this.props.data.subtitle)}</SubHeader>
           <Details className={this.state.active ? 'open' : ''}>
             {
               _.map(this.props.data.details, (detail, index) => <Section key={index}>{detail}</Section>)
