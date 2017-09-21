@@ -4,7 +4,6 @@ import { injectGlobal } from 'styled-components';
 injectGlobal`
   html,
   body {
-    height: 100%;
     width: 100%;
   }
 
@@ -18,13 +17,22 @@ injectGlobal`
 
   #app {
     background-color: #fafafa;
-    min-height: 100%;
-    min-width: 100%;
+    height: 100%;
+    width: 100%;
   }
 
   p,
   label {
     font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
+  }
+
+  [data-reactroot] {
+    width: 100%;
+  }
+
+  .customActive {
+      transition: all 0.5s;
+      background-color: red;
   }
 `;

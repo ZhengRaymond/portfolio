@@ -6,6 +6,7 @@
 import { combineReducers } from 'redux-immutable';
 import { fromJS } from 'immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
+import { WORK_INFO, PROJECT_INFO } from './actions';
 
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
 
@@ -37,6 +38,17 @@ function routeReducer(state = routeInitialState, action) {
   }
 }
 
+function infoReducer(state = {}, action) {
+  switch (action.type) {
+    case WORK_INFO:
+      return { ...state, ["works"]: action.payload }
+    case PROJECT_INFO:
+      return { ...state, ["projects"]: action.payload}
+    default:
+      return state;
+  }
+}
+
 /**
  * Creates the main reducer with the asynchronously loaded ones
  */
@@ -45,5 +57,6 @@ export default function createReducer(asyncReducers) {
     route: routeReducer,
     language: languageProviderReducer,
     ...asyncReducers,
+    infoReducer
   });
 }
