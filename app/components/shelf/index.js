@@ -42,7 +42,7 @@ const ShelfButton = styled.a`
   transition: all 0.5s;
 
   &:focus {
-    outline:0;
+    outline:0 !important;
   }
 
   &:hover {
@@ -98,7 +98,8 @@ export default class Shelf extends React.Component {
             }
             else {
               return (
-                <ClipboardButton key={item.name} data-clipboard-text={item.value} data-tip="Copied to clipboard!">
+                <ClipboardButton ref="tooltip" key={item.name} data-clipboard-text={item.value} data-tip="Copied to clipboard!">
+                  <ReactTooltip event="click" place="bottom" afterShow={() => setTimeout(() => ReactTooltip.hide(), 2000)}/>
                   <ShelfButton>{item.button}</ShelfButton>
                 </ClipboardButton>
               )

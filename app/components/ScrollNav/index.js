@@ -156,6 +156,7 @@ export default class ScrollNav extends React.Component {
           <ScrollSocketArea id="home" name="Home"/>
           <ScrollSocketArea id="work-experience" name="Work Experience"/>
           <ScrollSocketArea id="projects" name="Projects"/>
+          <ScrollSocketArea id="education" name="Education"/>
         </ScrollBar>
       </ScrollBarArea>
     )

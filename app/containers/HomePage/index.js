@@ -10,7 +10,7 @@ import { fadein, fadein2, glow } from 'styles/animations';
 import COLORS from 'styles/colors';
 
 import Page from 'containers/Page';
-import Header from 'components/header'
+import Header, { SubHeader } from 'components/header'
 import Shelf from 'components/shelf';
 import ScrollNav from 'components/ScrollNav';
 var FADown = require('react-icons/lib/fa/angle-double-down');
@@ -126,6 +126,34 @@ const BlurredCode = styled.div`
   }
 `
 
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+const Col = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+`
+
+const Entry = styled.div`
+  font-size: 2vmin;
+  margin: 3px;
+  @media(max-device-width: 700px) {
+    font-size: 2.5vmin;
+  }
+`
+
+const StudyDetails = styled.div`
+  margin-right: 60px;
+
+  @media(max-device-width: 700px) {
+    margin-right: 0px;
+    margin-left: 60px;
+  }
+`
+
 class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
@@ -167,11 +195,12 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
               <br/><br/>
               <Header animation={true}>{"Hello, I'm Raymond"}</Header>
               <About>
-                I'm a 3rd-year student at the <ColorText color="gold">University of Waterloo</ColorText> (GPA 3.4), pursuing a Bachelor's of Computer Science along with minors in Statistics and in Combinatorics and optimization, expecting to graduate in April 2020.
+                I'm a 3rd-year student at the <ColorText color="gold">University of Waterloo</ColorText> (GPA 3.4), pursuing a Bachelor's of Computer Science along with minors in Statistics and in Combinatorics and Optimization, expecting to graduate in April 2020.
                 <br/><br/>
-                I'm a strong <ColorText color="blue">Full-stack Web Developer</ColorText>, good and experienced with and experienced with platform infrastructure tools. I love solving backend logic, but at the same time have a passion for design. I'm also very interested in <ColorText color="red">Data Science</ColorText>, pursuing the University of Waterloo's Computer Science with Data Science Program.
+                I'm a strong <ColorText color="blue">Full-stack Web Developer</ColorText>, experienced with various frontend frameworks, as well as with several platform infrastructure tools. I love solving backend logic, but at the same time have a passion for design. I'm also very interested in <ColorText color="red">Data Science</ColorText>, pursuing the University of Waterloo's Computer Science with Data Science Program.
                 <br/><br/>
                 Personally, I'm pursuing a skydiving license, love to go on road trips, hikes, or any outdoor hangouts, and play board games. I love to read books and watch anime -- always down for a good story!
+                <br/><br/>
               </About>
               <div style={{position: "relative", flex:"1"}}>
                 <DownwardArrow />
@@ -183,6 +212,51 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
             </OnePage>
             <OnePage name="projects">
               <Page data={this.props.projects} title="Projects" />
+              <br/><br/>
+            </OnePage>
+            <OnePage name="education">
+              <Header animation={false}>Skills and Education</Header>
+              <StudyDetails>
+                <Col style={{textAlign: "center"}}>
+                    <div style={{fontFamily: "Open Sans", fontSize: "5vmin", marginLeft: "70px"}}>My most proficient skills.</div>
+                    <Row style={{justifyContent:"center"}}>
+                      <Col style={{textAlign: "right", flex: "1"}}>
+                        <Entry>Web</Entry>
+                        <Entry>General</Entry>
+                        <Entry>Database</Entry>
+                        <Entry>Infrastructure</Entry>
+                        <Entry>Data Science</Entry>
+                        <Entry>Mobile</Entry>
+                        <Entry>Scripting</Entry>
+                      </Col>
+                      <Col style={{textAlign: "left", flex: "1"}}>
+                        <Entry>MEAN, React, Redux, Relay, Flask</Entry>
+                        <Entry>C++, C</Entry>
+                        <Entry>MongoDB, SQL, Sequelize, GraphQL</Entry>
+                        <Entry>Kubernetes, Docker, Terraform, Vault</Entry>
+                        <Entry>MatLab, Python, Tensorflow</Entry>
+                        <Entry>React Native, Expo</Entry>
+                        <Entry>Python, Bash</Entry>
+                      </Col>
+                    </Row>
+                    <br/>
+                    <div style={{fontFamily: "Open Sans", fontSize: "5vmin", marginLeft: "30px"}}>My current coursework.</div>
+                    <Row style={{justifyContent:"center"}}>
+                      <Col style={{textAlign: "right", flex:"1"}}>
+                        <Entry>Computer Science</Entry>
+                        <Entry>Statistics</Entry>
+                        <Entry>Combinatorics & Optimization</Entry>
+                        <Entry>Machine Learning (Udemy)</Entry>
+                      </Col>
+                      <Col style={{textAlign: "left", flex:"1"}}>
+                        <Entry>Operating Systems, Algorithms, Numerical Computation</Entry>
+                        <Entry>Applied Probability</Entry>
+                        <Entry>Introduction to Graph Theory</Entry>
+                        <Entry>Practical Deep Learning, Convolutional Neural Networks, Recurrent Neural Networks</Entry>
+                      </Col>
+                    </Row>
+                </Col>
+              </StudyDetails>
               <br/><br/>
             </OnePage>
           </div>
