@@ -6,6 +6,7 @@ import GithubIcon from 'react-icons/lib/fa/github';
 import LinkedInIcon from 'react-icons/lib/fa/linkedin';
 import PhoneIcon from 'react-icons/lib/fa/phone';
 import EmailIcon from 'react-icons/lib/fa/envelope-o';
+import ResumeIcon from 'react-icons/lib/fa/file-text-o';
 
 import ClipboardButton from 'react-clipboard.js';
 import ReactTooltip from 'react-tooltip'
@@ -46,7 +47,25 @@ const ShelfButton = styled.a`
   }
 
   &:hover {
-    color: #blue;
+    color: orange;
+    transform: scale(1.2);
+    transition: all 0.5s;
+  }
+`
+
+const ShelfButton2 = styled(ClipboardButton)`
+  margin: 0px 3px 0px 3px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.5s;
+
+  &:focus {
+    outline:0 !important;
+  }
+
+  &:hover {
+    color: orange;
     transform: scale(1.1);
     transition: all 0.5s;
   }
@@ -83,25 +102,28 @@ const items = [
   { url: 'https://www.linkedin.com/in/r29zheng/', name: 'LinkedIn', button: <LinkedInIcon/>, text: null },
   { value: 'raymond.zheng@edu.uwaterloo.ca', name: 'Email', button: <EmailIcon/> , text: 'raymond.zheng@edu.uwaterloo.ca' },
   { value: '2266001234', name: 'Phone', button: <PhoneIcon/>, text: '(226) 600-1234' },
+  { url: "https://github.com/ZhengRaymond/resume/blob/master/Raymond Zheng's Resume.pdf?raw=true", name: 'Resume', button: <ResumeIcon/>, text: null },
 ]
 
 export default class Shelf extends React.Component {
   render() {
     return (
       <ShelfContainer>
+        <ReactTooltip event="click" place="bottom" afterShow={() => setTimeout(() => ReactTooltip.hide(), 1500)}/>
         {
           _.map(items, (item) => {
             if (item.url) {
               return (
-                <ShelfButton key={item.name} target="_blank" href={item.url}>{item.button}</ShelfButton>
+                <ShelfButton aria-label={item.name} key={item.name} target="_blank" href={item.url}>{item.button}</ShelfButton>
               )
             }
             else {
               return (
-                <ClipboardButton ref="tooltip" key={item.name} data-clipboard-text={item.value} data-tip="Copied to clipboard!">
-                  <ReactTooltip event="click" place="bottom" afterShow={() => setTimeout(() => ReactTooltip.hide(), 2000)}/>
-                  <ShelfButton>{item.button}</ShelfButton>
-                </ClipboardButton>
+                <div>
+                  <ShelfButton2 aria-label={item.name} ref="tooltip" key={item.name} data-clipboard-text={item.value} data-tip="Copied to clipboard!" data-delay-show="100">
+                    {item.button}
+                  </ShelfButton2>
+                </div>
               )
             }
           })
