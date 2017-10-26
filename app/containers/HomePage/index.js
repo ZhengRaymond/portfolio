@@ -218,7 +218,7 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
               <Header animation={false}>Skills and Education</Header>
               <StudyDetails>
                 <Col style={{textAlign: "center"}}>
-                    <div style={{fontFamily: "Open Sans", fontSize: "5vmin", marginLeft: "70px"}}>My most proficient skills.</div>
+                    <div style={{fontFamily: "Open Sans", fontSize: "5vmin", marginLeft: "70px"}}>Proficient skills.</div>
                     <Row style={{justifyContent:"center"}}>
                       <Col style={{textAlign: "right", flex: "1"}}>
                         <Entry>Web</Entry>
@@ -240,19 +240,17 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
                       </Col>
                     </Row>
                     <br/>
-                    <div style={{fontFamily: "Open Sans", fontSize: "5vmin", marginLeft: "30px"}}>My current coursework.</div>
+                    <div style={{fontFamily: "Open Sans", fontSize: "5vmin", marginLeft: "30px"}}>Current coursework.</div>
                     <Row style={{justifyContent:"center"}}>
                       <Col style={{textAlign: "right", flex:"1"}}>
                         <Entry>Computer Science</Entry>
                         <Entry>Statistics</Entry>
-                        <Entry>Combinatorics & Optimization</Entry>
-                        <Entry>Machine Learning (Udemy)</Entry>
+                        <Entry>Data Science</Entry>
                       </Col>
                       <Col style={{textAlign: "left", flex:"1"}}>
                         <Entry>Operating Systems, Algorithms, Numerical Computation</Entry>
                         <Entry>Applied Probability</Entry>
-                        <Entry>Introduction to Graph Theory</Entry>
-                        <Entry>Practical Deep Learning, Convolutional Neural Networks, Recurrent Neural Networks</Entry>
+                        <Entry>Practical Deep Learning, Convolutional Neural Networks, Recurrent Neural Networks (Udemy)</Entry>
                       </Col>
                     </Row>
                 </Col>

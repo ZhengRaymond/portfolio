@@ -99,8 +99,8 @@ const ShelfButton2 = styled(ClipboardButton)`
 
 const items = [
   { url: 'https://github.com/ZhengRaymond', name: 'GitHub', button: <GithubIcon/>, text: null },
-  { url: 'https://www.linkedin.com/in/r29zheng/', name: 'LinkedIn', button: <LinkedInIcon/>, text: null },
-  { value: 'raymond.zheng@edu.uwaterloo.ca', name: 'Email', button: <EmailIcon/> , text: 'raymond.zheng@edu.uwaterloo.ca' },
+  { url: 'https://www.linkedin.com/in/ZhengRaymond/', name: 'LinkedIn', button: <LinkedInIcon/>, text: null },
+  { value: 'raymond.zheng@uwaterloo.ca', name: 'Email', button: <EmailIcon/> , text: 'raymond.zheng@edu.uwaterloo.ca' },
   { value: '2266001234', name: 'Phone', button: <PhoneIcon/>, text: '(226) 600-1234' },
   { url: "https://github.com/ZhengRaymond/resume/blob/master/Raymond Zheng's Resume.pdf?raw=true", name: 'Resume', button: <ResumeIcon/>, text: null },
 ]
