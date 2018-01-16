@@ -4,9 +4,7 @@ build
 node_modules
 stats.json
 docs
-
-
-# Cruft
+*.iml
 .DS_Store
 npm-debug.log
 .idea
