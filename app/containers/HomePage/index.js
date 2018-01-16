@@ -146,8 +146,7 @@ const Entry = styled.div`
 `
 
 const StudyDetails = styled.div`
-  margin-right: 60px;
-
+  width: 100%;
   @media(max-device-width: 700px) {
     margin-right: 0px;
     margin-left: 60px;
@@ -217,43 +216,37 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
             <OnePage name="education">
               <Header animation={false}>Skills and Education</Header>
               <StudyDetails>
-                <Col style={{textAlign: "center"}}>
-                    <div style={{fontFamily: "Open Sans", fontSize: "5vmin", marginLeft: "70px"}}>Proficient skills.</div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
+                    <div style={{fontFamily: "Open Sans", fontSize: "5vmin"}}>Preferred/Proficient Tools.</div>
                     <Row style={{justifyContent:"center"}}>
                       <Col style={{textAlign: "right", flex: "1"}}>
                         <Entry>Web</Entry>
-                        <Entry>General</Entry>
-                        <Entry>Database</Entry>
-                        <Entry>Infrastructure</Entry>
-                        <Entry>Data Science</Entry>
                         <Entry>Mobile</Entry>
-                        <Entry>Scripting</Entry>
+                        <Entry>Data Science</Entry>
+                        <Entry>Metaheuristics</Entry>
+                        <Entry>Infrastructure</Entry>
+                        <Entry>Systems</Entry>
+                        <Entry>General</Entry>
                       </Col>
-                      <Col style={{textAlign: "left", flex: "1"}}>
-                        <Entry>MEAN, React, Redux, Relay, Flask</Entry>
-                        <Entry>C++, C</Entry>
-                        <Entry>MongoDB, SQL, Sequelize, GraphQL</Entry>
-                        <Entry>Kubernetes, Docker, Terraform, Vault</Entry>
-                        <Entry>MatLab, Python, Tensorflow</Entry>
+                      <Col style={{textAlign: "left", flex: "2"}}>
+                        <Entry>MEAN, React, Redux, Relay, MongoDB, SQL, GraphQL</Entry>
                         <Entry>React Native, Expo</Entry>
-                        <Entry>Python, Bash</Entry>
+                        <Entry>Python, R, Pandas, Scikit-learn, MatLab</Entry>
+                        <Entry>Optaplanner, Google Operations Research</Entry>
+                        <Entry>CircleCI, Segment, Kubernetes, Docker, Vault</Entry>
+                        <Entry>Linux, Universal Windows Platform (UWP)</Entry>
+                        <Entry>Python, Java, C++, C</Entry>
                       </Col>
                     </Row>
                     <br/>
-                    <div style={{fontFamily: "Open Sans", fontSize: "5vmin", marginLeft: "30px"}}>Current coursework.</div>
+                    <div style={{fontFamily: "Open Sans", fontSize: "5vmin"}}>Current coursework.</div>
                     <Row style={{justifyContent:"center"}}>
-                      <Col style={{textAlign: "right", flex:"1"}}>
-                        <Entry>Computer Science</Entry>
-                        <Entry>Statistics</Entry>
-                        <Entry>Data Science</Entry>
-                      </Col>
-                      <Col style={{textAlign: "left", flex:"1"}}>
-                        <Entry>Operating Systems, Algorithms, Numerical Computation</Entry>
-                        <Entry>Applied Probability</Entry>
-                        <Entry>Practical Deep Learning, Convolutional Neural Networks, Recurrent Neural Networks (Udemy)</Entry>
+                      <Col style={{textAlign: "center", flex:"1"}}>
+                        <Entry>Neural Networks and Deep Learning (<a href="https://www.deeplearning.ai/">deeplearning.ai</a>)</Entry>
+                        <Entry>Cartography (<a href="https://uwflow.com/course/geog181">GEOG 181, Waterloo</a>)</Entry>
                       </Col>
                     </Row>
-                </Col>
+                </div>
               </StudyDetails>
               <br/><br/>
             </OnePage>

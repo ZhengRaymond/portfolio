@@ -4,6 +4,36 @@ export const PROJECT_INFO = 'PROJECT_INFO';
 export const fetch_works = () => {
   var data = [
     {
+      title: 'Etsy',
+      link: 'etsy.com',
+      subtitle: [
+        'May 2018 - August 2018',
+        'New York',
+        'Marketing Services Fullstack'
+      ],
+      details: [
+        '...'
+      ],
+      skills: [
+        '...'
+      ]
+    },
+    {
+      title: 'Homer Logistics',
+      link: 'https://www.homerlogistics.com',
+      subtitle: [
+        'Jan 2018 - Present',
+        'New York',
+        'Operations Research Intern'
+      ],
+      details: [
+        '...'
+      ],
+      skills: [
+        '...'
+      ]
+    },
+    {
       title: 'AppDirect',
       link: 'https://www.appdirect.com/',
       subtitle: [
@@ -46,6 +76,20 @@ export const fetch_works = () => {
 
 export const fetch_projects = () =>  {
   var data = [
+    {
+      title: 'Total Control Rent',
+      link: 'https://github.com/ZhengRaymond/nearest-housing-by-transit',
+      subtitle: [
+        'December 2017 - Present'
+      ],
+      details: [
+        'Scrapes various housing websites like Craigslist, Airbnb, Streeteasy, etc. for housing, analyzes, and presents data',
+        'Visualizes housing options with data on Crime rate, commute time, local amenities, local cuisine, etc.'
+      ],
+      skills: [
+        'Node.js, Cheerio, React, Leaflet, Google Maps, Route360'
+      ]
+    },
     {
       title: 'Stylezure',
       link: 'https://github.com/ZhengRaymond/Stylezure',
